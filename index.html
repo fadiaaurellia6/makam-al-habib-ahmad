@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makam Al Habib Ahmad bin Abdullah bin Thalib Alatas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Initial Navbar Style */
+        .navbar {
+            transition: background-color 0.3s, backdrop-filter 0.3s;
+        }
+
+        .navbar-blur {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-solid {
+            background-color: white !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .nav-link,
+        .navbar-brand {
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navbar.navbar-solid .nav-link,
+        .navbar.navbar-solid .navbar-brand {
+            color: #333;
+        }
+
+        .nav-link.active {
+            color: rgb(255, 234, 0) !important;
+            padding-bottom: 5px;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: rgb(255, 234, 0) !important;
+        }
+
+
+        /* Carousel Style */
+        .carousel-item {
+            height: 60vh;
+            min-height: 400px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* Sections */
+        .about,
+        .highlights,
+        .visit-us {
+            padding: 50px 20px;
+        }
+
+        /* Highlights Section Images */
+        .highlights img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .visit-us {
+            background-color: #f3f3e0;
+        }
+
+        /* Custom CSS for Video Section */
+        .video-section {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+
+        .video-section .video-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .video-section .video-description {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .video-section iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (min-width: 768px) {
+            .video-section iframe {
+                height: 360px;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Change Button Color */
+        .btn-map {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .btn-map:hover {
+            background-color: #555;
+            color: #fff;
+        }
+
+        /* Animation CSS */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-blur" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-mosque"></i> Makam Al Habib Ahmad</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about"><i class="fas fa-info-circle"></i> Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#highlights"><i class="fas fa-star"></i> Daya Tarik</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#visit-us"><i class="fas fa-map-marker-alt"></i> Kunjungi Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Carousel Section -->
+    <section id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('img/hero3.jpg');">
+                <div class="container h-100 d-flex align-items-center justify-content-center">
+                    <div class="text-center text-white">
+                        <h1 class="display-4">Makam Al Habib Ahmad bin Abdullah bin Thalib Alatas</h1>
+                        <p>Wisata Religi di Pekalongan, Jawa Tengah</p>
+                        <a href="#about" class="btn btn-light mt-3">Explore More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('img/hero2.jpg');">
+                <div class="container h-100 d-flex align-items-center justify-content-center">
+                    <div class="text-center text-white">
+                        <h1 class="display-4">Suasana Damai dan Indah</h1>
+                        <p>Mengundang Anda untuk berziarah dan berdoa</p>
+                        <a href="#visit-us" class="btn btn-light mt-3">Kunjungi Kami</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('img/hero.jpg');">
+                <div class="container h-100 d-flex align-items-center justify-content-center">
+                    <div class="text-center text-white">
+                        <h1 class="display-4">Nilai Religi dan Sejarah</h1>
+                        <p>Makam yang penuh dengan nilai sejarah dan ajaran Islam</p>
+                        <a href="#highlights" class="btn btn-light mt-3">Daya Tarik</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container text-center">
+            <h2 class="section-title">Tentang Makam Al Habib Ahmad</h2>
+            <p>Makam Al Habib Ahmad bin Abdullah bin Thalib Alatas adalah salah satu tujuan wisata religi yang terkenal
+                di Kota Pekalongan. Terletak di Jl. Madura, Sapuro Kebulen, makam ini menjadi tempat yang sering
+                dikunjungi oleh para peziarah yang ingin memanjatkan doa dan mengenang perjuangan Al Habib Ahmad dalam
+                menyebarkan ajaran Islam.</p>
+            <p>Setiap tahunnya, banyak peziarah dari berbagai daerah yang datang untuk berziarah dan mencari ketenangan
+                batin di sini. Makam ini terkenal akan keindahan arsitekturnya yang memadukan nilai-nilai sejarah dan
+                religi.</p>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section id="highlights" class="highlights text-center section">
+        <div class="container">
+            <h2 class="section-title">Fitur dan Daya Tarik</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/arsitektur.jpg" alt="Arsitektur Unik" class="img-fluid rounded-circle mb-3">
+                    <h4>Arsitektur Unik</h4>
+                    <p>Bangunan makam ini memiliki arsitektur unik yang memadukan gaya klasik dan elemen budaya lokal.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/ibadah.jpg" alt="Tempat Ibadah" class="img-fluid rounded-circle mb-3">
+                    <h4>Tempat Ibadah</h4>
+                    <p>Disediakan area khusus untuk ibadah, memungkinkan para peziarah untuk berdoa dengan khusyuk.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/panorama.jpg" alt="Panorama Alam" class="img-fluid rounded-circle mb-3">
+                    <h4>Panorama Alam</h4>
+                    <p>Dikelilingi oleh pemandangan alam yang asri, menambah suasana damai bagi para pengunjung.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video Section -->
+    <section id="virtual-tour" class="video-section section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Text Content on the Left -->
+                <div class="col-md-6">
+                    <h2 class="video-title">Virtual Tour: Makam Al Habib Ahmad</h2>
+                    <p class="video-description">
+                        Jelajahi keindahan dan kedamaian Makam Al Habib Ahmad bin Abdullah bin Thalib Alatas melalui
+                        video virtual tour ini. Saksikan suasana tenang, arsitektur unik, dan panorama alam yang
+                        mengelilingi tempat ziarah ini. Video ini akan membawa Anda dalam pengalaman berziarah dari
+                        kenyamanan rumah Anda.
+                    </p>
+                </div>
+                <!-- YouTube Video on the Right -->
+                <div class="col-md-6">
+                    <iframe src="https://www.youtube.com/embed/uDCK7TDMQ4c" title="Virtual Tour Makam Al Habib Ahmad"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Visit Us Section -->
+    <section id="visit-us" class="visit-us text-center section">
+        <div class="container">
+            <h2 class="section-title">Kunjungi Kami</h2>
+            <p><i class="fas fa-map-marker-alt"></i> Makam Al Habib Ahmad bin Abdullah bin Thalib Alatas berada di:</p>
+            <p><strong>Jl. Madura, Sapuro Kebulen, Kec. Pekalongan Bar., Kota Pekalongan, Jawa Tengah 51112</strong></p>
+            <p>Buka setiap hari untuk kunjungan umum dan kegiatan keagamaan. Kami mengundang Anda untuk datang,
+                berziarah, dan merasakan ketenangan serta kedamaian yang ada di tempat ini.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Makam+Al+Habib+Ahmad+bin+Abdullah+bin+Thalib+Alatas"
+                class="btn btn-map mt-3" target="_blank"><i class="fas fa-map"></i> Lihat di Peta</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Makam Al Habib Ahmad bin Abdullah bin Thalib Alatas. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Change Navbar Background on Scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-solid');
+                navbar.classList.remove('navbar-blur');
+            } else {
+                navbar.classList.add('navbar-blur');
+                navbar.classList.remove('navbar-solid');
+            }
+        });
+    </script>
+    <script>
+        // Function to add animation when section is in viewport
+        function animateOnScroll() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (sectionTop < windowHeight - 100) {
+                    section.classList.add('animated');
+                }
+            });
+        }
+
+        // Run the function on scroll
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Run on page load
+        window.addEventListener('load', animateOnScroll);
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+            function setActiveLink() {
+                let index = sections.length;
+
+                while (--index && window.scrollY + 150 < sections[index].offsetTop) { }
+
+                navLinks.forEach((link) => link.classList.remove("active"));
+                navLinks[index].classList.add("active");
+            }
+            window.addEventListener("scroll", setActiveLink);
+        });
+    </script>
+</body>
+
+</html>
